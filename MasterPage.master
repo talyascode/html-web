@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet.css"  type="text/css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body style="background-image:url(imagies/movies_background.jpg );" >
+
+    <form id="form1" runat="server">
+    <div>
+    <table >
+        <tr><td style="background-color:#c4a27e" class="header" colspan ="6">movies recomendations</td></tr>
+            <tr><td><%=helloMsg %></td><td><%=panel %></td><td><%=userLogin %></td><td >&nbsp</td><td >&nbsp</td></tr>
+            <tr class="links">
+                <td style="width:20%;height:30px;background-color:#ebd9c7">
+                   <a href="HomePage.aspx">
+                       Home page
+                   </a>
+
+                </td>
+                <td style="width:20%;background-color:#ebd9c7">
+                    <a href="registeration_page.aspx">
+                        Registertion
+                    </a>
+                </td>
+                <td style="width:20%;background-color:#ebd9c7">
+                    <a href="fav_movies.aspx">My fav movies</a>
+
+                </td>
+                <td style="width:20%;background-color:#ebd9c7">
+                    <a href="movies-from-different-decads.aspx">Movies From Decades</a>
+                </td>
+                <td style="width:20%;background-color:#ebd9c7">
+                <a href="popular_movies.aspx">Popular Movies</a>
+                </td>
+                <td style="width:20%;background-color:#ebd9c7">
+                <a href="Questanair2.aspx">quiz</a></td>
+            </tr>
+            <tr>
+                <td colspan ="5">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                 </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        <tr>
+  <td>You are visitor number: </td>
+  <td><asp:Label ID="lblCount" runat="server" ForeColor="black" /></td>
+              <td colspan ="3"></td>
+
+   </tr>
+        
+        </table>
+    </div>
+
+    </form>
+
+</body>
+</html>
